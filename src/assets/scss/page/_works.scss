@@ -1,0 +1,322 @@
+@use "../config/variables" as v;
+@use "../mixin" as m;
+
+body.page {
+    main.works {
+        position: relative;
+
+        .deco01::before {
+            content: "";
+            background-image: url(/assets/img/works/deco01.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right: 30px;
+            top: 300px;
+        }
+
+        .deco02::after {
+            content: "";
+            background-image: url(/assets/img/works/deco02.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 2vw;
+            top: 1000px;
+        }
+
+        .deco03::after {
+            content: "";
+            background-image: url(/assets/img/works/deco03.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right: 2vw;
+            top: 1600px;
+        }
+    }
+
+    .works-list {
+        &__inner {
+            max-width: 1280px;
+            padding: 0 40px;
+            margin: 0 auto 180px;
+
+            &__tab {
+                display: flex;
+                margin-bottom: 80px;
+
+                @include m.mq(sp) {
+                    justify-content: center;
+                }
+
+                li.tab {
+                    display: inline-flex;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    font-size: 24px;
+                    color: v.$sub;
+
+                    @include m.mq(sp) {
+                        width: 110px;
+                    }
+                }
+
+                .tab.is-active {
+                    border-bottom: 3px solid v.$sub;
+                }
+            }
+
+            .tab-contents-box {
+                .tab-contents {
+                    display: none;
+                }
+
+                .tab-contents.is-show {
+                    display: block;
+
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        gap: 40px 30px;
+
+                        li {
+                            width: calc(100% / 3 - 80px);
+                            @include m.mq(sp) {
+                                width: 100%;
+                            }
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .works-contents {
+        &__inner {
+            max-width: 1280px;
+            padding: 0 40px;
+            margin: 0 auto 180px;
+
+            h3 {
+                font-size: 42px;
+                margin-bottom: 60px;
+
+                @include m.mq(sp) {
+                    font-size: 28px;
+                }
+            }
+
+            .img-list {
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                margin-bottom: 80px;
+                position: relative;
+
+                &__pc {
+                    width: 76%;
+                    position: relative;
+                    text-align: center;
+
+                    .mac_img {
+                        z-index: 1;
+                        width: 100%;
+                    }
+
+                    .pc_img {
+                        z-index: 2;
+                        position: absolute;
+                        top: 3%;
+                        left: 14%;
+                        width: 72%;
+                    }
+                }
+
+                &__sp {
+                    width: 24%;
+                    position: relative;
+                    text-align: center;
+
+                    .phone_img {
+                        z-index: 1;
+                        width: 61%;
+                    }
+
+                    .sp_img {
+                        z-index: 2;
+                        position: absolute;
+                        top: 10%;
+                        left: 24%;
+                        width: 52%;
+                        border-radius: 0 0 16px 16px;
+
+                        @include m.mq(sp) {
+                            border-radius: 6px;
+                        }
+                    }
+                }
+            }
+
+            .detail {
+                text-align: center;
+                margin-bottom: 80px;
+
+                @include m.mq(sp) {
+                    text-align: left;
+                }
+
+                .tag {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .page_list {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: start;
+                @include m.mq(sp) {
+                    flex-direction: column;
+                    margin-bottom: 30px;
+                }
+
+                &__page {
+                    width: 30%;
+                    margin: 0 20px 80px;
+                    border: v.$sub 2px solid;
+
+                    @include m.mq(sp) {
+                        width: 60%;
+                        margin: 0 auto 20px;
+                    }
+                }
+            }
+
+            .works-description {
+                width: fit-content;
+                margin: 0 auto 120px;
+                color: v.$sub;
+
+                &__overview {
+                    margin-bottom: 20px;
+                }
+
+                ul.composition {
+                    margin-top: 20px;
+                    li {
+                        margin-bottom: 10px;
+                        span {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sp-design {
+            background-color: v.$sub;
+
+            &__inner {
+                max-width: 1280px;
+                padding: 80px 40px;
+                margin: 0 auto 120px;
+                display: flex;
+                justify-content: space-between;
+
+                @include m.mq(sp) {
+                    flex-direction: column;
+                }
+
+                p {
+                    color: #fff;
+                }
+
+                &__left {
+                    width: 30%;
+
+                    @include m.mq(sp) {
+                        width: 100%;
+                    }
+
+                    &__bottom {
+                        padding-top: 200px;
+                        padding-left: 40px;
+
+                        @include m.mq(sp) {
+                            padding-top: 0;
+                            padding-left: 0;
+                        }
+                    }
+                }
+
+                &__center {
+                    width: 70%;
+                    position: relative;
+                    text-align: center;
+
+                    @include m.mq(sp) {
+                        width: 100%;
+                    }
+
+                    &__bg {
+                        width: 264px;
+                        height: 523px;
+                        background-image: url(/assets/img/works/phone_scroll.png);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        margin-left: auto;
+                        margin-right: auto;
+
+                        &__img {
+                            margin: auto;
+                            height: 92%;
+                            width: 88%;
+                            overflow: scroll;
+                            scrollbar-width: none;
+                            -ms-overflow-style: none;
+                            position: relative;
+                            top: 31px;
+                            border-radius: 0 0 20px 20px;
+                        }
+
+                        &__img::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+
+                }
+
+                &__right {
+                    width: 30%;
+                    padding-top: 100px;
+
+                    @include m.mq(sp) {
+                        width: 100%;
+                        padding-top: 0;
+                    }
+                }
+
+                .sp-design__inner__left__point {
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        p.btn {
+            margin: 0 auto 80px;
+        }
+    }
+}

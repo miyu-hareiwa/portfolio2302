@@ -1,0 +1,39 @@
+{
+  "name": "portfolio2302",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^9.1.2",
+    "browser-sync": "^2.29.1",
+    "connect-ssi": "^1.1.1",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-filter": "^7.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "jquery": "^3.6.4",
+    "sass": "^1.61.0",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^5.77.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miyu-hareiwa/portfolio2302.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miyu-hareiwa/portfolio2302/issues"
+  },
+  "homepage": "https://github.com/miyu-hareiwa/portfolio2302#readme"
+}
