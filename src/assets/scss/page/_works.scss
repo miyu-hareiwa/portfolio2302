@@ -89,11 +89,54 @@ body.page {
 
                         li {
                             width: calc(100% / 3 - 80px);
+
                             @include m.mq(sp) {
                                 width: 100%;
                             }
-                            img{
+
+                            img {
                                 width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #photo {
+                ul {
+                    gap: inherit;
+
+                    li {
+                        width: auto;
+                        height: 200px;
+                        flex-grow: 1;
+
+                        img {
+                            object-fit: cover;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            #movie {
+                ul {
+                    @include m.mq(sp) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    li {
+                        width: calc(100% / 2 - 40px);
+                        text-align: center;
+                        @include m.mq(sp) {
+                            width: 100%;
+                        }
+                        iframe{
+                            width: 100%;
+                            height: 300px;
+                            @include m.mq(sp) {
+                                width: 90%;
                             }
                         }
                     }
@@ -186,6 +229,7 @@ body.page {
                 justify-content: center;
                 position: relative;
                 align-items: start;
+
                 @include m.mq(sp) {
                     flex-direction: column;
                     margin-bottom: 30px;
@@ -212,10 +256,18 @@ body.page {
                     margin-bottom: 20px;
                 }
 
+                &__detail {
+                    li {
+                        list-style: disc;
+                    }
+                }
+
                 ul.composition {
                     margin-top: 20px;
+
                     li {
                         margin-bottom: 10px;
+
                         span {
                             font-weight: bold;
                         }

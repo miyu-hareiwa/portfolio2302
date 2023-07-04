@@ -154,8 +154,11 @@ body.top {
         &__list {
           &__item {
             border: 1px solid v.$sub;
-            width: 150px;
-            height: 86px;
+            width: auto;
+            height: 90px;
+            img{
+              height: 100%;
+            }
           }
         }
 
@@ -390,9 +393,11 @@ body.top {
 
         h2 {
           width: fit-content;
-          margin: auto;
+          margin: 0 auto 20px;
         }
-
+        &__address{
+          font-size: 2rem;
+        }
         p {
           text-align: center;
         }
